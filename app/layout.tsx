@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import CustomCursor from "@/components/ui/custom-cursor";
 import AnimatedBackground from "@/components/ui/animated-background";
+import ScrollProgress from "@/components/ui/scroll-progress";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
         <SmoothScroll>
           <CustomCursor />
           <AnimatedBackground />
+          <ScrollProgress />
           {children}
         </SmoothScroll>
       </body>
