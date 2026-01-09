@@ -24,27 +24,18 @@ export default function FeaturedProjects() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            const projects = gsap.utils.toArray<HTMLElement>(".project-card");
-            if (!projects.length) return;
+            const cards = gsap.utils.toArray<HTMLElement>(".project-card");
+            if (!cards.length) return;
 
-            const triggerTarget = containerRef.current ?? projects[0];
-
-            // Reveal all project cards together when the section enters view
-            gsap
-                .timeline({
-                    scrollTrigger: {
-                        trigger: triggerTarget,
-                        start: "top 80%",
-                        toggleActions: "play none none none", // don't hide on scroll out
-                    },
-                })
-                .from(projects, {
-                    opacity: 0,
-                    y: 80,
-                    duration: 0.9,
-                    ease: "power3.out",
-                    stagger: 0, // simultaneous
-                });
+            // On initial load or category change: reveal cards immediately
+            gsap.from(cards, {
+                opacity: 0,
+                y: 40,
+                duration: 0.7,
+                ease: "power3.out",
+                stagger: 0.08,
+                clearProps: "transform,opacity",
+            });
         }, containerRef);
 
         return () => ctx.revert();
@@ -99,7 +90,7 @@ export default function FeaturedProjects() {
                         key={project.id}
                         className="project-card group flex flex-col gap-5 h-full rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm p-4 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)] hover:-translate-y-1 hover:border-accent transition-all duration-300"
                     >
-                        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-neutral-900">
+                        <div className="relative aspect-4/3 w-full overflow-hidden rounded-xl bg-neutral-900">
                             <Image
                                 src={project.thumbnail}
                                 alt={project.title}
@@ -108,7 +99,7 @@ export default function FeaturedProjects() {
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 priority={project.id <= 2}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-80" />
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm uppercase tracking-wide text-white backdrop-blur">
                                     View details <ArrowUpRight size={16} />
