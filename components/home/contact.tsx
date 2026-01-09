@@ -6,7 +6,7 @@ import { SOCIAL_LINKS } from "@/lib/data";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 px-6 md:px-20 bg-background min-h-screen flex flex-col justify-between">
+        <section id="contact" className="py-24 px-6 md:px-20 bg-[radial-gradient(circle_at_70%_10%,#131313,transparent_30%),linear-gradient(145deg,#080808,#0b0f15)] min-h-screen flex flex-col justify-between">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
 
                 {/* Left Side: Info */}
@@ -15,7 +15,7 @@ export default function Contact() {
                         Let's Connect
                     </h2>
                     <p className="text-muted text-lg max-w-md">
-                        Say hello at <a href="mailto:robert@gmail.com" className="text-white hover:text-accent transition-colors">robert@gmail.com</a>
+                        Say hello at <a href="mailto:Kenenisamekonnensori@gmail.com" className="text-white hover:text-accent transition-colors">Kenenisamekonnensori@gmail.com</a>
                         <br />
                         For more info, here's my <a href="/resume.pdf" className="text-white hover:text-accent transition-colors">resume</a>.
                     </p>
@@ -37,7 +37,7 @@ export default function Contact() {
                     </div>
 
                     <div className="mt-auto pt-20">
-                        <p className="text-muted text-sm">© 2023 Robert Garcia</p>
+                        <p className="text-muted text-sm">© 2026 Kenenisa Mekonnen</p>
                     </div>
                 </div>
 

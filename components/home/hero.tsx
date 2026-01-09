@@ -22,7 +22,7 @@ const staggerContainer = {
 
 export default function Hero() {
     return (
-        <section className="min-h-screen flex flex-col justify-center px-6 md:px-20 pt-20 pb-10 overflow-hidden">
+        <section className="min-h-[calc(100vh-4rem)] flex flex-col justify-center px-6 md:px-20 pt-4 md:pt-12 pb-8 overflow-hidden bg-[radial-gradient(circle_at_20%_20%,#1a1a1a,transparent_35%),radial-gradient(circle_at_80%_0%,#141414,transparent_30%),linear-gradient(135deg,#080808,#0f1018)]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <motion.div
@@ -70,12 +70,11 @@ export default function Hero() {
 
                 {/* Right Image */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-                    className="relative w-full max-w-sm md:max-w-md aspect-square md:aspect-[4/5] bg-card rounded-2xl overflow-hidden mx-auto lg:mr-0"
+                    className="relative w-full max-w-xs sm:max-w-sm md:max-w-sm lg:max-w-md aspect-square md:aspect-4/5 bg-card rounded-2xl overflow-hidden mx-auto lg:mr-0"
                 >
-                    {/* Use a placeholder first if the image name is hard to guess, but I copied it to 'hero.png' */}
                     <Image
                         src="/images/hero.JPG"
                         alt="Kenenisa Mekonnen"

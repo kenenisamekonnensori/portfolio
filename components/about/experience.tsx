@@ -10,7 +10,7 @@ const fadeUp = {
 
 export default function Experience() {
     return (
-        <section className="py-24 px-6 md:px-20 bg-background">
+        <section className="py-24 px-6 md:px-20 bg-[radial-gradient(circle_at_20%_30%,#141414,transparent_35%),linear-gradient(135deg,#080808,#101010)]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div>
                     <motion.h2

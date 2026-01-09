@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AboutSummary() {
     return (
-        <section id="about" className="py-24 px-6 md:px-20 bg-background flex flex-col md:flex-row gap-12 md:gap-24">
+        <section id="about" className="py-24 px-6 md:px-20 bg-[radial-gradient(circle_at_30%_20%,#141414,transparent_35%),linear-gradient(160deg,#080808,#0e0e12)] flex flex-col md:flex-row gap-12 md:gap-24">
             <div className="md:w-1/3">
                 <h2 className="text-4xl md:text-6xl font-display font-bold uppercase sticky top-32">
                     About Me

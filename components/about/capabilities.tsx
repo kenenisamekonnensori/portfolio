@@ -19,7 +19,7 @@ const skills = [
 
 export default function Capabilities() {
     return (
-        <section className="py-24 px-6 md:px-20 bg-background overflow-hidden min-h-[80vh] flex items-center">
+        <section className="py-24 px-6 md:px-20 bg-[radial-gradient(circle_at_80%_30%,#0d1824,transparent_35%),linear-gradient(135deg,#080808,#0c1118)] overflow-hidden min-h-[80vh] flex items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center w-full">
                 <div>
                     <motion.h2

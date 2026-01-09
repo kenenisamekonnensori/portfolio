@@ -12,7 +12,7 @@ const fadeUp = {
 
 export default function AboutHero() {
     return (
-        <section className="pt-32 pb-16 px-6 md:px-20 bg-background">
+        <section className="pt-10 pb-16 px-6 md:px-20 bg-[radial-gradient(circle_at_15%_20%,#141414,transparent_35%),linear-gradient(140deg,#080808,#0e0f13)]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                 {/* Left Content */}
                 <div className="flex flex-col gap-12">
@@ -30,7 +30,7 @@ export default function AboutHero() {
                         animate="visible"
                         variants={fadeUp}
                         transition={{ delay: 0.2 }}
-                        className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-card"
+                        className="relative aspect-4/3 w-full rounded-2xl overflow-hidden bg-card"
                     >
                         <Image
                             src="/images/hero.JPG"

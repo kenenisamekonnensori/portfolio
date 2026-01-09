@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/ui/smooth-scroll";
-import CustomCursor from "@/components/ui/custom-cursor";
-import AnimatedBackground from "@/components/ui/animated-background";
+import BackgroundParallax from "@/components/ui/background-parallax";
 import ScrollProgress from "@/components/ui/scroll-progress";
+import CursorGlow from "@/components/ui/cursor-glow";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,8 +17,8 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Robert Garcia | Frontend Developer",
-  description: "Portfolio of Robert Garcia - Frontend Developer & Mechanical Engineer",
+  title: "Kenenisa Mekonnen | Full Stack Developer",
+  description: "Portfolio of Kenenisa Mekonnen - Full Stack Developer and Compter Science and Engineering Student",
 };
 
 export default function RootLayout({
@@ -32,8 +32,8 @@ export default function RootLayout({
         className={`${inter.variable} ${oswald.variable} antialiased bg-background text-foreground`}
       >
         <SmoothScroll>
-          <CustomCursor />
-          <AnimatedBackground />
+          <BackgroundParallax />
+          <CursorGlow />
           <ScrollProgress />
           {children}
         </SmoothScroll>
