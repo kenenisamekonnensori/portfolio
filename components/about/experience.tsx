@@ -47,6 +47,7 @@ export default function Experience() {
                             </p>
                         </motion.div>
                     ))}
+
                 </div>
             </div>
         </section>

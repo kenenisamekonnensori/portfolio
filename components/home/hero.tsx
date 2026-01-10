@@ -22,7 +22,7 @@ const staggerContainer = {
 
 export default function Hero() {
     return (
-        <section className="min-h-[calc(100vh-4rem)] flex flex-col justify-center px-6 md:px-20 pt-4 md:pt-12 pb-8 overflow-hidden bg-[radial-gradient(circle_at_20%_20%,#1a1a1a,transparent_35%),radial-gradient(circle_at_80%_0%,#141414,transparent_30%),linear-gradient(135deg,#080808,#0f1018)]">
+        <section className="min-h-[calc(100vh-4rem)] flex flex-col justify-center px-6 md:px-20 pt-4 md:pt-6 pb-8 overflow-hidden bg-[radial-gradient(circle_at_20%_20%,#1a1a1a,transparent_35%),radial-gradient(circle_at_80%_0%,#141414,transparent_30%),linear-gradient(135deg,#080808,#0f1018)]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <motion.div

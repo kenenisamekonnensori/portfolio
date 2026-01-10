@@ -154,3 +154,39 @@ export const EXPERIENCE = [
         description: "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
 ];
+
+// Additional stacks and tools that complement a well-rounded full‑stack profile.
+export const ADDITIONAL_STACKS: { title: string; items: string[] }[] = [
+    {
+        title: "Backend",
+        items: ["NestJS", "FastAPI", "GraphQL", "Apollo", "WebSockets"],
+    },
+    {
+        title: "Databases",
+        items: ["PostgreSQL", "MongoDB", "Redis", "ClickHouse"],
+    },
+    {
+        title: "DevOps",
+        items: ["Docker", "Kubernetes", "GitHub Actions", "Nginx", "Terraform"],
+    },
+    {
+        title: "Cloud",
+        items: ["AWS (Lambda, S3, RDS)", "Vercel", "DigitalOcean"],
+    },
+    {
+        title: "Messaging",
+        items: ["RabbitMQ", "Kafka"],
+    },
+    {
+        title: "Auth & Security",
+        items: ["OAuth2", "JWT", "NextAuth", "OWASP Practices"],
+    },
+    {
+        title: "Testing",
+        items: ["Jest", "Vitest", "Playwright", "Postman"],
+    },
+    {
+        title: "Observability",
+        items: ["Sentry", "Prometheus", "Grafana"],
+    },
+];
