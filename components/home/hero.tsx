@@ -32,7 +32,7 @@ export default function Hero() {
                     className="flex flex-col gap-8"
                 >
                     <div>
-                        <motion.h1 variants={fadeUp} className="text-5xl md:text-8xl font-display font-bold uppercase leading-[0.9]">
+                        <motion.h1 variants={fadeUp} className="text-4xl md:text-7xl font-display font-bold uppercase leading-[0.9]">
                             Hi, I Am
                             <br />
                             <span className="text-white">Kenenisa Mekonnen.</span>

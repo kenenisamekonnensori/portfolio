@@ -53,7 +53,7 @@ export default function AboutHero() {
                         initial={{ opacity: 0, x: -16 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7 }}
-                        className="text-4xl md:text-5xl font-display font-bold leading-tight"
+                        className="text-3xl md:text-4xl font-display font-bold leading-tight"
                     >
                         Full‑stack developer.
                     </motion.h2>
@@ -66,14 +66,14 @@ export default function AboutHero() {
                     >
                         My journey started with curiosity about how things work and grew into a career across frontend, backend, and everything between.
                     </motion.p>
-                    <motion.p
+                    {/* <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-muted text-lg leading-relaxed max-w-2xl"
                     >
                         Today I focus on crafting seamless user experiences while maintaining robust, scalable infrastructure. I believe the best software blends intuitive design with sound engineering principles.
-                    </motion.p>
+                    </motion.p> */}
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -124,9 +124,9 @@ export default function AboutHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="rounded-2xl border border-accent/30 bg-[linear-gradient(180deg,#0b0f15,#0a0a0a)] p-6 md:p-8 shadow-[0_0_60px_-30px_rgba(212,255,0,.4)]"
+                    className="w-full overflow-x-auto rounded-3xl border border-accent/30 bg-[linear-gradient(180deg,#0b0f15,#0a0a0a)] p-4 md:p-6 shadow-[0_0_60px_-30px_rgba(212,255,0,.4)]"
                 >
-                    <pre className="text-sm md:text-base font-mono leading-relaxed text-foreground/90">
+                    <pre className="text-sm md:text-base font-mono leading-relaxed text-foreground/90 whitespace-pre-wrap wrap-break-word">
                         <span className="text-sky-300">const</span> <span className="text-emerald-300">developer</span> = {'{'}
                         {"\n"}  <span className="text-muted">name</span>: <span className="text-accent">"Kenenisa Mekonnen"</span>,
                         {"\n"}  <span className="text-muted">location</span>: <span className="text-accent">"Ethiopia"</span>,

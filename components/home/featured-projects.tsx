@@ -55,8 +55,8 @@ export default function FeaturedProjects() {
             ref={containerRef}
             className="py-24 px-6 md:px-20 bg-[radial-gradient(circle_at_15%_30%,#0f1a2e,transparent_35%),radial-gradient(circle_at_85%_20%,#0b1222,transparent_30%),linear-gradient(135deg,#08090d,#0b0f1a)]"
         >
-            <div className="mb-16">
-                <h2 className="text-4xl md:text-6xl font-display font-bold uppercase mb-4">
+            <div className="mb-10">
+                <h2 className="text-4xl md:text-5xl font-display font-bold uppercase mb-4">
                     Featured Projects
                 </h2>
                 <p className="text-muted text-lg max-w-xl">
@@ -64,7 +64,7 @@ export default function FeaturedProjects() {
                 </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 mb-12">
+            <div className="flex flex-wrap gap-1 mb-8">
                 {categories.map((category) => {
                     const isActive = activeCategory === category;
                     return (
@@ -83,7 +83,7 @@ export default function FeaturedProjects() {
                 })}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
                 {filteredProjects.map((project) => (
                     <Link
                         href={`/projects/${project.slug}`}

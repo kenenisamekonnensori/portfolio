@@ -73,7 +73,7 @@ export default function Capabilities() {
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="text-5xl md:text-6xl font-display font-bold uppercase mb-8"
+                            className="text-3xl md:text-4xlfont-display font-bold uppercase mb-8"
                         >
                             My Capabilities
                         </motion.h2>
@@ -93,7 +93,7 @@ export default function Capabilities() {
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                            className="relative w-100 h-100 rounded-full border border-white/10"
+                            className="relative w-90 h-90 rounded-full border border-white/10"
                         >
                             {skills.map((skill, index) => {
                                 const angle = (index / skills.length) * 360;

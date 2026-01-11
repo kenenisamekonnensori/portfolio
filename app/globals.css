@@ -42,3 +42,8 @@ body {
 .caret-blink {
   animation: caret-blink 1s step-end infinite;
 }
+
+/* Scale the entire design using rem for reliable layout without transform side-effects */
+html { font-size: 100%; }
+/* Slightly smaller typography on desktops without visual zoom */
+@media (min-width: 1024px) { html { font-size: 95%; } }

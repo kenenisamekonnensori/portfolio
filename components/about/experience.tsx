@@ -18,7 +18,7 @@ export default function Experience() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeUp}
-                        className="text-5xl md:text-6xl font-display font-bold uppercase"
+                        className="text-3xl md:text-4xl sticky top-24 font-display font-bold uppercase"
                     >
                         My Experience
                     </motion.h2>

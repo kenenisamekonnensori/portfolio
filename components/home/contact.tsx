@@ -58,7 +58,7 @@ export default function Contact() {
             >
                 {/* Header */}
                 <motion.div variants={item} className="mb-12">
-                    <h2 className="text-4xl md:text-6xl font-display font-bold">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold">
                         Let's Work Together
                     </h2>
                     <p className="text-muted mt-3 max-w-2xl">
@@ -77,10 +77,10 @@ export default function Contact() {
                             <Mail className="h-4 w-4 text-accent" />
                             <span>Email</span>
                         </div>
-                        <div className="mt-4 flex flex-wrap items-center gap-4">
+                        <div className="mt-4 flex flex-wrap items-center gap-2">
                             <a
                                 href={`mailto:${email}`}
-                                className="text-2xl md:text-3xl font-medium hover:text-accent transition-colors"
+                                className="text-2xl md:text-2xl font-medium hover:text-accent transition-colors"
                             >
                                 {email}
                             </a>
