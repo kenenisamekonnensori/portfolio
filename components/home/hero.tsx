@@ -40,7 +40,7 @@ export default function Hero() {
                     </div>
 
                     <motion.p variants={fadeUp} className="text-muted text-lg md:text-xl max-w-md leading-relaxed">
-                        A highly creative Full Stack developer Building projects that solves problem
+                        Full Stack developer Building projects that solves problem
                     </motion.p>
 
                     <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-6">

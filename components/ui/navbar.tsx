@@ -22,14 +22,14 @@ export default function Navbar() {
             <ul className="mx-auto max-w-6xl h-full flex items-center gap-6 px-6 md:px-10 text-white">
                 {navItems.map((item) => (
                     <li key={item.name}>
-                        <Link
+                        <a
                             href={item.href}
                             className="group relative inline-flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/10 transition-colors duration-300"
                             aria-label={item.name}
                         >
                             <item.icon size={20} className="group-hover:text-accent transition-colors" />
                             <span className="hidden sm:inline text-sm uppercase tracking-wider font-bold">{item.name}</span>
-                        </Link>
+                        </a>
                     </li>
                 ))}
             </ul>

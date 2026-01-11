@@ -1,11 +1,10 @@
 "use client";
 
-import { useRef, useEffect, ReactNode } from "react";
+import { useRef, useEffect, ReactNode, ButtonHTMLAttributes } from "react";
 import gsap from "gsap";
 
-interface MagneticButtonProps {
+interface MagneticButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
-    className?: string;
     strength?: number; // How strong the pull is
 }
 
@@ -13,6 +12,7 @@ export default function MagneticButton({
     children,
     className = "",
     strength = 0.5,
+    ...rest
 }: MagneticButtonProps) {
     const buttonRef = useRef<HTMLButtonElement>(null);
     const textRef = useRef<HTMLSpanElement>(null);
@@ -60,7 +60,7 @@ export default function MagneticButton({
     }, [strength]);
 
     return (
-        <button ref={buttonRef} className={`relative ${className}`}>
+        <button ref={buttonRef} className={`relative ${className}`} {...rest}>
             <span ref={textRef} className="relative z-10 block">
                 {children}
             </span>

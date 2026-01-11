@@ -89,15 +89,24 @@ export default function AboutHero() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="flex items-center gap-6"
                     >
-                        <MagneticButton className="flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground rounded-full text-sm font-bold uppercase tracking-wider hover:bg-white transition-colors">
+                        <MagneticButton 
+                            onClick = { () => {
+                                const link = document.createElement('a');
+                                link.href = '/resume.pdf';
+                                link.download = 'kenenisa-mekonnen-resume.pdf';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
+                            className="flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground rounded-full text-sm font-bold uppercase tracking-wider hover:bg-white transition-colors">
                             <span>Download Resume</span>
                             <div className="w-2 h-2 bg-black rounded-full" />
                         </MagneticButton>
                         <div className="flex gap-4">
-                            <a href="#" className="p-3 border border-border rounded-full hover:border-accent hover:text-accent transition-colors">
+                            <a href="https://www.linkedin.com/in/kenenisamekonnen/" target="_blank" rel="noopener noreferrer" className="p-3 border border-border rounded-full hover:border-accent hover:text-accent transition-colors">
                                 <Linkedin size={20} />
                             </a>
-                            <a href="#" className="p-3 border border-border rounded-full hover:border-accent hover:text-accent transition-colors">
+                            <a href="https://github.com/kenenisamekonnensori" target="_blank" rel="noopener noreferrer" className="p-3 border border-border rounded-full hover:border-accent hover:text-accent transition-colors">
                                 <Github size={20} />
                             </a>
                         </div>
@@ -105,11 +114,11 @@ export default function AboutHero() {
                     {/* Metrics inline to keep section full-screen */}
                     <div className="grid grid-cols-3 gap-6 max-w-4xl pt-4">
                         <div>
-                            <CountUp to={5} suffix="+" />
+                            <CountUp to={3} suffix="+" />
                             <div className="text-sm text-muted">Years Experience</div>
                         </div>
                         <div>
-                            <CountUp to={20} suffix="+" />
+                            <CountUp to={15} suffix="+" />
                             <div className="text-sm text-muted">Projects Delivered</div>
                         </div>
                         <div>

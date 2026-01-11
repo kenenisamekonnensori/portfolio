@@ -1,17 +1,17 @@
 export const SOCIAL_LINKS = [
     {
         name: "LinkedIn",
-        url: "https://linkedin.com",
+        url: "https://www.linkedin.com/in/kenenisamekonnen/",
         icon: "Linkedin",
     },
     {
         name: "GitHub",
-        url: "https://github.com",
+        url: "https://github.com/kenenisamekonnensori",
         icon: "Github",
     },
     {
-        name: "Twitter",
-        url: "https://twitter.com",
+        name: "X",
+        url: "https://x.com/kenenisa1153",
         icon: "Twitter",
     },
 ];
@@ -143,15 +143,15 @@ export const SKILLS = [
 export const EXPERIENCE = [
     {
         role: "Freelance Developer",
-        company: "Self-Employed",
-        period: "Nov 2023 - Present",
-        description: "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        company: "Self-Employed | upwork.com | freelancer.com",
+        period: "Nov 2024 - Present",
+        description: "Providing end-to-end web development services for diverse clients, specializing in building responsive and user-friendly websites and applications. Collaborating closely with clients to understand their requirements and deliver tailored solutions that meet their business goals.",
     },
     {
-        role: "Front-End Intern",
-        company: "Roos Tech",
-        period: "Sep 2023 - Nov 2023",
-        description: "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        role: "Software Engineering Intern",
+        company: "ASTU ICT Center",
+        period: "June 2025 - Sep 2025",
+        description: "Contributed to the development of internal tools, applications and building of Employee performance management systems for ASTU ICT Center, focusing on enhancing functionality and user experience. Gained hands-on experience with full-stack development, working with technologies such as React, Node.js, and PostgreSQL. Collaborated with a team of developers to implement new features and fix bugs, while also participating in code reviews and team meetings.",
     },
 ];
 
