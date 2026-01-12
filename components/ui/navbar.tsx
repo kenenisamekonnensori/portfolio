@@ -5,12 +5,17 @@ import { motion } from "framer-motion";
 import { Home, Briefcase, User, Mail } from "lucide-react";
 
 const navItems = [
-    { name: "Home", href: "/", icon: Home },
-    { name: "Work", href: "/#work", icon: Briefcase },
-    { name: "About", href: "/about", icon: User },
-    { name: "Contact", href: "#contact", icon: Mail },
+    { name: "Home",id: "home", href: "/", icon: Home },
+    { name: "Work",id: "work", href: "/#work", icon: Briefcase },
+    { name: "About",id: "about", href: "/about", icon: User },
+    { name: "Contact",id: "contact", href: "#contact", icon: Mail },
 ];
 
+const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+    })
+}
 export default function Navbar() {
     return (
         <motion.nav
@@ -22,14 +27,15 @@ export default function Navbar() {
             <ul className="mx-auto max-w-6xl h-full flex items-center gap-6 px-6 md:px-10 text-white">
                 {navItems.map((item) => (
                     <li key={item.name}>
-                        <a
+                        <Link
                             href={item.href}
                             className="group relative inline-flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/10 transition-colors duration-300"
                             aria-label={item.name}
+                            onClick={() => scrollToSection(item.id)}
                         >
                             <item.icon size={20} className="group-hover:text-accent transition-colors" />
                             <span className="hidden sm:inline text-sm uppercase tracking-wider font-bold">{item.name}</span>
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
