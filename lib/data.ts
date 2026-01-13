@@ -103,7 +103,7 @@ export const PROJECTS: Project[] = [
         year: "2025",
         thumbnail: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80",
         shortDescription: "An AI-powered resume builder that helps users create professional CVs with ease.",
-        tech: ["Next.js", "Neon", "Prisma", "Gemini", "Tailwind"],
+        tech: ["Next.js", "Neon", "Prisma", "Gemini", "Tailwind", "Framer Motion", "TypeScript"],
         description: "Developed an intuitive resume builder leveraging AI to assist users in crafting professional CVs effortlessly. Integrated real-time previews, customizable templates, and export options to various formats. Ensured accessibility and responsive design for a seamless user experience across devices.",
         links: {
             demo: "https://dreamcv.example.com",
