@@ -76,6 +76,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                             {project.links.repo && (
                                 <Link
                                     href={project.links.repo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm uppercase tracking-wide text-white hover:border-accent hover:text-accent transition-colors"
                                 >
                                     Code <ArrowUpRight size={16} />
