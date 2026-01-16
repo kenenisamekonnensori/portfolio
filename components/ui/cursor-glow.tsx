@@ -1,86 +1,61 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-export default function BackgroundParallax() {
-  // normalized cursor offsets
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+// Premium cursor-following glow that stays behind content
+export default function CursorGlow() {
+    const [enabled, setEnabled] = useState(false);
 
-  // smooth inertia (critical)
-  const smoothX = useSpring(x, { stiffness: 40, damping: 25, mass: 1 });
-  const smoothY = useSpring(y, { stiffness: 40, damping: 25, mass: 1 });
+    // Track raw pointer position
+    const x = useMotionValue(-1000);
+    const y = useMotionValue(-1000);
 
-  useEffect(() => {
-    const move = (e: MouseEvent) => {
-      const cx = e.clientX / window.innerWidth - 0.5;
-      const cy = e.clientY / window.innerHeight - 0.5;
+    // Smooth inertia using springs
+    const smoothX = useSpring(x, { stiffness: 180, damping: 24, mass: 0.6 });
+    const smoothY = useSpring(y, { stiffness: 180, damping: 24, mass: 0.6 });
 
-      x.set(cx);
-      y.set(cy);
-    };
+    useEffect(() => {
+        // Disable on touch / coarse pointers
+        const mql = window.matchMedia("(pointer: coarse)");
+        const update = () => setEnabled(!mql.matches);
+        update();
+        mql.addEventListener("change", update);
 
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
-  }, [x, y]);
+        const handleMove = (event: MouseEvent) => {
+            x.set(event.clientX);
+            y.set(event.clientY);
+        };
 
-  return (
-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-      
-      {/* LAYER 1 – slow, deep */}
-      <motion.div
-        style={{
-          x: smoothX.get() * 20,
-          y: smoothY.get() * 20,
-        }}
-        className="absolute inset-0"
-      >
-        <div
-          className="absolute left-1/4 top-1/4 w-[600px] h-[600px]"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(99,102,241,0.25), transparent 70%)",
-            filter: "blur(120px)",
-          }}
-        />
-      </motion.div>
+        if (!mql.matches) {
+            window.addEventListener("mousemove", handleMove);
+        }
 
-      {/* LAYER 2 – medium depth */}
-      <motion.div
-        style={{
-          x: smoothX.get() * 35,
-          y: smoothY.get() * 35,
-        }}
-        className="absolute inset-0"
-      >
-        <div
-          className="absolute right-1/4 bottom-1/4 w-[450px] h-[450px]"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(236,72,153,0.25), transparent 70%)",
-            filter: "blur(90px)",
-          }}
-        />
-      </motion.div>
+        return () => {
+            mql.removeEventListener("change", update);
+            window.removeEventListener("mousemove", handleMove);
+        };
+    }, [x, y]);
 
-      {/* LAYER 3 – fast, subtle */}
-      <motion.div
-        style={{
-          x: smoothX.get() * 50,
-          y: smoothY.get() * 50,
-        }}
-        className="absolute inset-0"
-      >
-        <div
-          className="absolute left-1/2 top-1/3 w-[300px] h-[300px]"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(34,211,238,0.25), transparent 70%)",
-            filter: "blur(60px)",
-          }}
-        />
-      </motion.div>
-    </div>
-  );
+    if (!enabled) return null;
+
+    return (
+        <motion.div
+            aria-hidden
+            style={{ translateX: smoothX, translateY: smoothY }}
+            className="pointer-events-none fixed inset-0 z-0"
+        >
+            <div
+                className="absolute -translate-x-1/2 -translate-y-1/2"
+                style={{
+                    width: 520,
+                    height: 520,
+                    background: "radial-gradient(circle at center, rgba(99,102,241,0.35), rgba(99,102,241,0))",
+                    filter: "blur(90px)",
+                    opacity: 0.35,
+                    mixBlendMode: "screen",
+                }}
+            />
+        </motion.div>
+    );
 }

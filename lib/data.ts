@@ -87,7 +87,7 @@ export const PROJECTS: Project[] = [
         title: "Filmpire Movie",
         category: "Frontend",
         year: "2024",
-        thumbnail: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80",
+        thumbnail: "/images/filmpire.jpg",
         shortDescription: "Movie search and discovery with IMDB integration and user reviews.",
         tech: ["HTML", "CSS", "JavaScript", "IMDB API"],
         description: "Developed a movie discovery website using the IMDB API to fetch movie data and display it in an engaging UI. Implemented search fuctionality, movie details pages, and user review features to enhance user interaction and experience.",
