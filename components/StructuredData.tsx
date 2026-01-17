@@ -11,7 +11,7 @@ export default function StructuredData() {
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Kenenisa Mekonnen",
-          url: "https://yourdomain.com",
+          url: "https://kenenisa.dev",
           jobTitle: "Full-Stack Developer",
           sameAs: [
             "https://github.com/kenenisamekonnensori",

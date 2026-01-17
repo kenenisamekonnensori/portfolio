@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Kenenisa Mekonnen | Full-Stack Developer",
     description:
       "Portfolio of Kenenisa Mekonnen, a full-stack developer building modern web application,mobile apps and AI-powered applications.",
-    url: "https://yourdomain.com",
+    url: "https://kenenisa.dev",
     siteName: "Kenenisa Mekonnen Portfolio",
     type: "website",
   },
