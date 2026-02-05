@@ -6,6 +6,8 @@ import BackgroundParallax from "@/components/ui/background-parallax";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import CursorGlow from "@/components/ui/cursor-glow";
 import StructuredData from "@/components/StructuredData";
+import { Analytics } from '@vercel/analytics/next';
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -69,6 +71,7 @@ export default function RootLayout({
           <StructuredData />
           {children}
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
