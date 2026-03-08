@@ -70,7 +70,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                                     href={project.links.live}
                                     className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm uppercase tracking-wide text-white backdrop-blur hover:bg-white/20 transition-colors"
                                 >
-                                    Live demo <ArrowUpRight size={16} />
+                                    Live<ArrowUpRight size={16} />
                                 </Link>
                             )}
                             {project.links.repo && (
