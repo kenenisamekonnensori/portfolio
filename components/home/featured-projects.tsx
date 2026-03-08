@@ -133,9 +133,9 @@ export default function FeaturedProjects() {
                             </div>
 
                             <div className="mt-auto flex gap-4 text-sm font-semibold uppercase tracking-wide text-accent">
-                                {project.links.demo && (
+                                {project.links.live && (
                                     <span className="inline-flex items-center gap-2">
-                                        Demo <ArrowUpRight size={16} />
+                                        Live <ArrowUpRight size={16} />
                                     </span>
                                 )}
                                 {project.links.repo && (
