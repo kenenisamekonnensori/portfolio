@@ -29,7 +29,7 @@ export type Project = {
     tech: string[];
     description: string;
     links: {
-        demo?: string;
+        live?: string;
         repo?: string;
     };
 };
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
         tech: ["Next.js", "Neon", "Prisma", "PostgreSQL", "Gemini", "Tailwind", "Framer Motion", "TypeScript"],
         description: "Developed an intuitive resume builder leveraging AI to assist users in crafting professional CVs effortlessly. Integrated real-time previews, customizable templates, and export options to various formats. Ensured accessibility and responsive design for a seamless user experience across devices.",
         links: {
-            demo: "https://dreamcv.example.com",
+            live: "https://dream-cv-delta.vercel.app/",
             repo: "https://github.com/kenenisamekonnensori/DreamCV",
         },
 
@@ -62,7 +62,7 @@ export const PROJECTS: Project[] = [
         tech: ["React", "TypeScript", "Tailwind", "Framer Motion", "Node", "Express", "Clipdrop Api", "MongoDB"],
         description: "Built an AI-powered image generation platform enabling users to create high-quality visuals from text prompts. Implemented a user-friendly interface with real-time feedback, customizable styles, and seamless sharing options. Focused on performance optimization and scalability to handle high user demand.",
         links: {
-            demo: "https://pixai-delta.vercel.app/",
+            live: "https://pixai-delta.vercel.app/",
             repo: "https://github.com/kenenisamekonnen/pixai-generator",
         },
     },
@@ -77,7 +77,7 @@ export const PROJECTS: Project[] = [
         tech: ["Node", "Express", "MongoDB", "Redis", "Gemeni API", "Next.js", "Tailwind CSS"],
         description: "Developed an AI-driven e-commerce platform that lets users find product using there own language and letting AI to do the rest. Implemented features like intelligent search, personalized recommendations, and seamless checkout process. Focused on creating a responsive and engaging user interface to enhance the shopping experience.",
         links: {
-            demo: "https://pulse-gateway.example.com",
+            // live: "https://pulse-gateway.example.com",
             repo: "https://github.com/kenenisamekonnensori/ShopGien-client",
         },
     },
@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
         tech: ["HTML", "CSS", "JavaScript", "IMDB API"],
         description: "Developed a movie discovery website using the IMDB API to fetch movie data and display it in an engaging UI. Implemented search fuctionality, movie details pages, and user review features to enhance user interaction and experience.",
         links: {
-            demo: "https://atlas-crm.example.com",
+            // live: "https://atlas-crm.example.com",
             repo: "https://github.com/kenenisamekonnen/filmpire-movie",
         },
     },
@@ -107,7 +107,7 @@ export const PROJECTS: Project[] = [
         tech: ["Java", "Javascript", "MySQL", "JavaScript", "React", "Springboot", "Tailwind CSS"],
         description: "A full-featured storefront with multi-step checkout, admin dashboards. Built to emulate enterprise-grade ecommerce flows with robust error states and accessibility baked in.",
         links: {
-            demo: "https://e-commerce-demo.example.com",
+            // live: "https://e-commerce-demo.example.com",
             repo: "https://github.com/kenenisamekonnen/fullstack-project",
         },
     },
@@ -122,7 +122,7 @@ export const PROJECTS: Project[] = [
         tech: ["Node", "Express", "MongoDB", "Redis", "Gemeni API", "Next.js", "Tailwind CSS"],
         description: "Developed an AI-driven e-commerce platform that lets users find product using there own language and letting AI to do the rest. Implemented features like intelligent search, personalized recommendations, and seamless checkout process. Focused on creating a responsive and engaging user interface to enhance the shopping experience.",
         links: {
-            demo: "https://pulse-gateway.example.com",
+            // live: "https://pulse-gateway.example.com",
             repo: "https://github.com/kenenisamekonnensori/ShopGien-backend",
         },
     },
