@@ -68,6 +68,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                             {project.links.live && (
                                 <Link
                                     href={project.links.live}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm uppercase tracking-wide text-white backdrop-blur hover:bg-white/20 transition-colors"
                                 >
                                     Live<ArrowUpRight size={16} />
